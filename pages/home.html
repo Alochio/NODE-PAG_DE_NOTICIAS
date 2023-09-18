@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlochioNews</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="/public/style.css" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <div class="center">
-            <div class="logo">
-                <h2><span style="font-weight:lighter;">Alochio</span><b>News</b></h2>
-            </div><!--logo-->
-            <div class="form-busca">
-                <form>
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <input name="busca" type="text" placeholder="Busca...">
-                </form>
-            </div><!--form-busca-->
-        </div><!--center-->
-    </header>
+    <%- include('partials/header.html') %>
 
     <section class="notica-destaque">
         <div class="center">
@@ -33,8 +8,7 @@
                 <div class="title-destaque-descricao">
                     <h2>Quer fugir das praias de verão?</h2>
                     <p>Se você busca alternativas refrescantes longe das praias lotadas no verão, explore trilhas em
-                        meio à natureza, visite lagos tranquilos ou descubra charmosas cidades do interior. Há muitas
-                        opções para aproveitar a estação de forma única e relaxante!</p>
+                        meio à natureza, ...</p>
                 </div>
                 <img src="/public/images/landscape.jpg" class="capa" />
             </div>
@@ -53,6 +27,7 @@
                             <h2>Como encarar o surf mesmo no frio</h2>
                             <p>A água gelada e o vento podem acabar com a sua felicidade de ir para a água. Ciêntistas
                                 afirmam que a chance de hipotermia é real e você precisa se cuidar. Veja como.</p>
+                            <a href="/encarar-o-surf">Saiba mais</a>
                         </div>
                     </div>
                     <div class="box-ultima-single">
@@ -62,16 +37,56 @@
                             <h2>Como encarar o surf mesmo no frio</h2>
                             <p>A água gelada e o vento podem acabar com a sua felicidade de ir para a água. Ciêntistas
                                 afirmam que a chance de hipotermia é real e você precisa se cuidar. Veja como.</p>
+                            <a href="/encarar-o-surf">Saiba mais</a>
                         </div>
                     </div>
                 </div><!--Ultimas-->
                 <div class="mais-lidas">
                     <h3>Mais Lidas</h3>
+                    <div class="mais-lidas-noticias">
+                        <div class="mais-lida-noticia-single">
+                            <img src="/public/images/natureza.png" />
+                            <div class="texto-mais-lida-single">
+                                <h4>Natureza</h4>
+                                <p>A importância da floresta do ártico para a biodiversidade mundial. Qual o impacto o
+                                    degelo na fauna e flora?</p>
+                                <a href="/encarar-o-surf">Saiba mais</a>
+                            </div>
+                        </div>
+                        <div class="mais-lida-noticia-single">
+                            <img src="/public/images/natureza.png" />
+                            <div class="texto-mais-lida-single">
+                                <h4>Natureza</h4>
+                                <p>A importância da floresta do ártico para a biodiversidade mundial. Qual o impacto o
+                                    degelo na fauna e flora?</p>
+                                <a href="/encarar-o-surf">Saiba mais</a>
+                            </div>
+                        </div>
+                        <div class="mais-lida-noticia-single">
+                            <img src="/public/images/natureza.png" />
+                            <div class="texto-mais-lida-single">
+                                <h4>Natureza</h4>
+                                <p>A importância da floresta do ártico para a biodiversidade mundial. Qual o impacto o
+                                    degelo na fauna e flora?</p>
+                                <a href="/encarar-o-surf">Saiba mais</a>
+                            </div>
+                        </div>
+                        <div class="mais-lida-noticia-single">
+                            <img src="/public/images/natureza.png" />
+                            <div class="texto-mais-lida-single">
+                                <h4>Natureza</h4>
+                                <p>A importância da floresta do ártico para a biodiversidade mundial. Qual o impacto o
+                                    degelo na fauna e flora?</p>
+                                <a href="/encarar-o-surf">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
                 </div><!--mais-lidas-->
             </div><!--center-->
         </div><!--title-outras-noticias-->
     </section>
 
+    <%- include('partials/footer.html') %>
 
 </body>
 
