@@ -1,9 +1,19 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 const path = require("path");
 
 const app = express();
+
+mongoose
+  .connect("mongodb+srv://alochioti:OPDz21OrVSYcSUfU@projectdanki.yyftraz.mongodb.net/", { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(function () {
+    console.log("Conectado com sucesso!");
+  })
+  .catch(function (err) {
+    console.log(err.message);
+  });
 
 app.use(bodyParser.json());
 app.use(
