@@ -6,6 +6,8 @@ const path = require("path");
 
 const app = express();
 
+const Posts = require('./Posts.js');
+
 mongoose
   .connect("mongodb+srv://alochioti:OPDz21OrVSYcSUfU@projectdanki.yyftraz.mongodb.net/", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(function () {
@@ -27,11 +29,18 @@ app.set("view engine", "html");
 app.use("/public", express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "/pages"));
 
-app.get("/", (req, res) => {
-  if (req.query.busca == null) {
-    res.render("home", {});
-  } else {
-    res.render("busca", {});
+
+app.get("/", async (req, res) => {
+  try {
+    if (req.query.busca == null) {
+      const posts = await Posts.find({}).sort({ '_id': -1 });
+      res.render("home", {posts:posts});
+    } else {
+      res.render("busca", {});
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Erro interno do servidor");
   }
 });
 
